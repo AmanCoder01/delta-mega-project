@@ -6,17 +6,17 @@
 
     <body>
 
-        <div class="main">
-            <div class="title">
+        <div class="main row">
+            <div class="title col-lg-8  col-md-10 col-sm-12">
                 <h3 class="listing-title">
                     <%= listing.title%>
                 </h3>
             </div>
 
-            <div class="image">
+            <div class="image col-lg-8 m-auto col-md-10 col-sm-10">
                 <div class="left">
                     <img src="<%= listing.image.url%>" alt="listing image"
-                        style="height: 26rem;border-bottom-left-radius: 1rem; border-top-left-radius: 1rem;">
+                        style="height: 26rem;">
                 </div>
                 <div class="right">
                     <img src="<%= listing.image.url%>" alt="listing image" class="mb-2"
@@ -26,8 +26,9 @@
                 </div>
             </div>
 
-            <div class="content">
-                <p class="card-text mt-2">
+            <div class="content col-lg-8 m-auto col-md-10 col-sm-12 ">
+   
+                <p class="card-text mt-2" >
                     <b>Owned by<i>
                             <%= listing.owner.username %>
                         </i></b>
@@ -45,7 +46,7 @@
             </div>
 
             <% if(currUser && currUser._id.equals(listing.owner._id)){ %>
-                <div class="btns my-3">
+                <div class="btns my-3 col-lg-8 m-auto col-md-10 col-sm-10">
                     <a class="btn add-btn" href="/listings/<%=listing._id%>/edit">Edit</a> <br><br>
                     <form method="post" action="/listings/<%=listing._id%>/?_method=DELETE">
                         <button class="btn add-btn">Delete</button>
@@ -54,7 +55,7 @@
                 <% } %>
 
 
-                    <div class="leave-review">
+                    <div class="leave-review col-lg-8 m-auto col-md-10 col-sm-10">
                         <% if(currUser) { %>
                             <div class="mt-8">
                                 <hr>
@@ -98,7 +99,7 @@
                     </div>
 
 
-                    <div class="all-review">
+                    <div class="all-review col-lg-8 m-auto col-md-10 col-sm-12">
                         <hr />
                         <% if(listing.reviews.length>0){ %>
 
@@ -106,8 +107,8 @@
                                 <h4 class="mt-5 mb-4">All Reviews</h4>
                                 <div class="row">
                                     <% for(review of listing.reviews){ %>
-                                        <div class="card col-5 my-3 p-3 mx-4 d-flex">
-                                            <div class="card-body">
+                                        <div class="card  col-lg-5 col-sm-12 my-3 p-3 mx-4 d-flex">
+                                            <div class="card-body ">
                                                 <h5 class="card-title mb-3">
                                                     @<%= review.author.username %>
                                                 </h5>
@@ -146,7 +147,7 @@
                     </div>
 
 
-                    <div class="map-loc mt-5">
+                    <div class="map-loc mt-5 col-lg-8 m-auto col-md-6 col-sm-12">
                         <h3 class="mb-5">Where you'll be</h3>
                         <div id="map">
 

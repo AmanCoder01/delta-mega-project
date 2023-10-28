@@ -15,6 +15,10 @@ body {
   flex: 1;
 }
 
+.title{
+  margin-left: 14rem;
+}
+
 /* Navbar */
 
 .inner {
@@ -88,13 +92,15 @@ body {
 /* Cards */
 
 .main {
-  margin-left: 4rem;
-  margin-right: 2rem;
-  width: 90%;
+  width: 100%;
 }
 
 .image .left {
   width: 49.5%;
+}
+.image .left img {
+  border-bottom-left-radius: 1rem; border-top-left-radius: 1rem;
+
 }
 
 .image {
@@ -302,6 +308,13 @@ body {
     font-size: 1rem;
     padding: 0.2rem;
   }
+
+  .add-new i{
+   font-size: 1.6rem;
+    
+
+  }
+  
   .home,
   .profile {
     display: flex;
@@ -322,4 +335,33 @@ body {
     margin-right: 1rem;
     padding: 0.2rem;
   }
+
+
+
+
+  .image .right{
+    display: none;
+  }
+  .image .left {
+    width: 100%;
+  }
+  .image .left img {
+    border-radius: 1rem;
+    margin-left: 1rem;
+
+  }
+
+
+  #map {
+    height: 25rem;
+    margin-left: 1rem;
+    
+  }
+
+  .title{
+    margin-left: 1rem;
+  }
+
+
+
 }
