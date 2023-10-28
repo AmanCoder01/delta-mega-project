@@ -19,9 +19,10 @@ module.exports.search = async (req, res) => {
     }
 
 
-    const mydata = await Listing.find({ "country": { $regex: ".*"+data+"" } });
+    const mydata = await Listing.find({ 'country': { '$regex': '.*'+data+'.*',"$options":"i" } });
+    
     if (mydata.length == 0) {
-        req.flash("error", "Kindly search with country name !");
+        req.flash("error", "No listings available for "+data+ " !");
         res.redirect("/listings");
     }
 

@@ -24,9 +24,9 @@
                     <a class="nav-link" href="/listings/new">Airbnb your home</a>
                 </li>
                 <% if(!currUser){ %>
-                    <li class="nav-item dropdown bg-secondary dropstart inner">
+                    <li class="nav-item dropdown  dropstart inner">
                         <a class="nav-link " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            A
+                            <i class="fa-regular fa-user"></i>
                         </a>
                         <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
                           <li><a class="dropdown-item" href="/signup">SignUp</a></li>
@@ -62,12 +62,3 @@
         </div>
     </div>
 </nav>
-
-<script>
-    let prof = document.getElementsByClassName("inner");
-
-    prof.addEventListener('click', ()=>{
-
-    } )
-
-</script>

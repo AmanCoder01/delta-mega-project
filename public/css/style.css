@@ -5,6 +5,12 @@ body {
   min-height: 100vh;
 }
 
+.footer{
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+}
+
 .container {
   flex: 1;
 }
@@ -22,6 +28,7 @@ body {
  align-items: center;
  justify-content: center;
  font-weight: bold;
+ background-color: rgba(128, 128, 128, 0.434);
 }
 
 .search-inp{
