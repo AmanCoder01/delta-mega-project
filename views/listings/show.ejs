@@ -7,13 +7,13 @@
     <body>
 
         <div class="main row">
-            <div class="title col-lg-8  col-md-10 col-sm-12">
+            <div class="title col-lg-12 col-md-10 col-sm-12">
                 <h3 class="listing-title">
                     <%= listing.title%>
                 </h3>
             </div>
 
-            <div class="image col-lg-8 m-auto col-md-10 col-sm-10">
+            <div class="image col-lg-8 m-auto col-md-10 col-sm-10" >
                 <div class="left">
                     <img src="<%= listing.image.url%>" alt="listing image"
                         style="height: 26rem;">
@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            <div class="content col-lg-8 m-auto col-md-10 col-sm-12 ">
+            <div class="content col-lg-8 m-auto col-md-10 col-sm-10 ">
    
                 <p class="card-text mt-2" >
                     <b>Owned by<i>
@@ -46,8 +46,8 @@
             </div>
 
             <% if(currUser && currUser._id.equals(listing.owner._id)){ %>
-                <div class="btns my-3 col-lg-8 m-auto col-md-10 col-sm-10">
-                    <a class="btn add-btn" href="/listings/<%=listing._id%>/edit">Edit</a> <br><br>
+                <div class="btns my-3 col-lg-8 m-auto col-md-10 col-sm-10" >
+                    <a class="btn add-btn"  href="/listings/<%=listing._id%>/edit">Edit</a> <br><br>
                     <form method="post" action="/listings/<%=listing._id%>/?_method=DELETE">
                         <button class="btn add-btn">Delete</button>
                     </form>
@@ -62,7 +62,7 @@
                                 <h4 class="mt-5">Leave a Review</h4>
                                 <form action="/listings/<%= listing._id%>/reviews" method="post"
                                     class="needs-validation" novalidate>
-                                    <div class="mb-2 mt-4 ">
+                                    <div class="mb-2 mt-4 ms-2 ">
                                         <label for="rating" class="form-label">Rating</label>
                                         <fieldset class="starability-slot">
                                             <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]"
@@ -81,15 +81,15 @@
 
                                     </div>
                                     <div class="mb-3">
-                                        <label for="comment" class="form-label">Comment</label>
+                                        <label for="comment" class="form-label ms-2">Comment</label>
                                         <textarea name="review[comment]" id="comment" cols="30" rows="3"
-                                            class="form-control" required></textarea>
+                                            class="form-control ms-2" required></textarea>
                                         <div class="invalid-feedback">
                                             Comment should be valid !
                                         </div>
                                     </div>
                                     <div class="mt-4 mb-5">
-                                        <button class="btn btn-outline-dark  ">Submit</button>
+                                        <button class="btn btn-outline-dark ms-2 ">Submit</button>
 
                                     </div>
                                 </form>

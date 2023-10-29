@@ -15,7 +15,7 @@ body {
   flex: 1;
 }
 
-.title{
+.title {
   margin-left: 14rem;
 }
 
@@ -36,6 +36,7 @@ body {
 .search-inp {
   border-radius: 25px !important;
   padding: 0.5rem 3rem 0.5rem 3rem !important ;
+  box-shadow: 1px 0.5px 3px black;
 }
 .search-btn {
   background-color: #fe424d !important;
@@ -60,7 +61,7 @@ body {
 
 /* Footer */
 
-.mob-footer{
+.mob-footer {
   display: none;
 }
 
@@ -99,8 +100,8 @@ body {
   width: 49.5%;
 }
 .image .left img {
-  border-bottom-left-radius: 1rem; border-top-left-radius: 1rem;
-
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
 }
 
 .image {
@@ -237,10 +238,9 @@ body {
   padding: 0.3rem;
 }
 
-/* .filter:hover{
+.filter:hover{
   opacity: 1;
-  border-bottom: 2px solid gray;
-} */
+}
 
 .tax {
   margin-left: 5rem;
@@ -267,6 +267,7 @@ body {
     font-size: 0.7rem;
   }
   .filters {
+    margin-top: 4rem;
     margin-bottom: 2rem;
   }
 
@@ -309,12 +310,18 @@ body {
     padding: 0.2rem;
   }
 
-  .add-new i{
-   font-size: 1.6rem;
-    
-
+  .add-new i {
+    font-size: 1.6rem;
   }
-  
+
+  .search-inp {
+    padding: 0.5rem 2rem 0.5rem 2rem !important ;
+  }
+
+  .search-bar-content {
+    display: flex;
+    align-items: center ;
+  }
   .home,
   .profile {
     display: flex;
@@ -330,16 +337,33 @@ body {
   }
 
   .search-bar {
-    display: inline;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    padding: 0.2rem;
+    display: block;
+    padding: 0.5rem;
+    background-color: #ebebeb;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+    border-bottom :1px solid #787777a5;
   }
 
+  .search-inp{
+    padding: 0.2rem 2rem 0.2rem 2rem !important ;
 
+  }
 
+  .search-btn{
+    height: 2rem;
+    width: 2rem;
+    padding: 0.2rem  !important;
+    border-radius: 50% !important;
+  }
 
-  .image .right{
+  .search-bar i{
+    font-size: 0.9rem;
+  }
+
+  .image .right {
     display: none;
   }
   .image .left {
@@ -348,20 +372,21 @@ body {
   .image .left img {
     border-radius: 1rem;
     margin-left: 1rem;
-
   }
 
-
+  .content p,.add-btn{
+   margin-left: 1rem;
+  }
   #map {
     height: 25rem;
     margin-left: 1rem;
-    
   }
 
-  .title{
+  .title {
     margin-left: 1rem;
   }
 
-
-
+  .listing-title{
+    margin-top: 5rem;
+  }
 }
